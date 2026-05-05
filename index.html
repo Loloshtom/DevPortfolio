@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <meta name="description" content="Portfolio początkującego Front-end Developera. Zobacz moje projekty i skontaktuj się ze mną.">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            
+            <button class="hamburger" aria-label="Otwórz menu" aria-expanded="false" id="mobile-menu-btn">
+                ☰
+            </button>
+
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hero" class="nav-link">Start</a></li>
+                    <li><a href="#about" class="nav-link">O mnie</a></li>
+                    <li><a href="#portfolio" class="nav-link">Projekty</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Cześć, jestem Dmytro</h1>
+                <p class="hero-subtitle">Tworzę nowoczesne i responsywne strony internetowe.</p>
+                <a href="#portfolio" class="btn">Zobacz moje prace</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>O mnie</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Pasjonat technologii webowych</h3>
+                        <p>Jestem początkującym Front-end Developerem. Skupiam się na tworzeniu czystego, semantycznego kodu oraz dostępnych interfejsów (WCAG). Stale poszerzam swoją wiedzę o nowe narzędzia i frameworki.</p>
+                        <p>Moje główne technologie to:</p>
+                        <ul class="skills-list">
+                            <li>HTML5</li>
+                            <li>CSS3 (Flexbox/Grid)</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Git</li>
+                            <li>Podstawy React</li>
+                        </ul>
+                    </div>
+                    <svg class="about-img" viewBox="0 0 400 400" role="img" aria-label="Ilustracja przedstawiająca programistę przy biurku">
+                        <rect width="400" height="400" fill="#1e293b"/>
+                        <circle cx="200" cy="150" r="50" fill="#94a3b8"/>
+                        <path d="M100 350 Q200 250 300 350 Z" fill="#94a3b8"/>
+                        <text x="200" y="380" fill="#38bdf8" text-anchor="middle" font-family="sans-serif">Zdjęcie profilowe</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <div class="container">
+                <h2>Moje Projekty</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-img-placeholder" role="img" aria-label="Zrzut ekranu aplikacji ToDo">
+                            <span>Aplikacja ToDo</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Menadżer zadań</h3>
+                            <p>Prosta aplikacja do zarządzania zadaniami napisana w czystym JavaScript, wykorzystująca LocalStorage do zapisu danych.</p>
+                            <div class="project-tags">
+                                <span>#HTML</span>
+                                <span>#CSS</span>
+                                <span>#JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-img-placeholder" role="img" aria-label="Zrzut ekranu strony pogodowej">
+                            <span>Aplikacja Pogodowa</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Sprawdzacz pogody</h3>
+                            <p>Aplikacja pobierająca dane z zewnętrznego API pogodowego za pomocą Fetch API. Responsywny interfejs dzięki CSS Grid.</p>
+                            <div class="project-tags">
+                                <span>#API</span>
+                                <span>#Async/Await</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-img-placeholder" role="img" aria-label="Zrzut ekranu wizytówki firmy">
+                            <span>Wizytówka Firmy</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Landing Page</h3>
+                            <p>Nowoczesna strona lądowania przygotowana dla lokalnej kawiarni. Zoptymalizowana pod kątem SEO i dostępności.</p>
+                            <div class="project-tags">
+                                <span>#Responsive</span>
+                                <span>#A11y</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <p style="margin-bottom: 2rem;">Masz pytania lub propozycję współpracy? Napisz do mnie!</p>
+                
+                <div id="success-message" class="success-msg">
+                    Wiadomość została wysłana pomyślnie! Odezwię się wkrótce.
+                </div>
+
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" name="name" required aria-describedby="name-error">
+                        <span id="name-error" class="error-msg">Proszę podać swoje imię i nazwisko (min. 3 znaki).</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adres E-mail</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <span id="email-error" class="error-msg">Proszę podać poprawny adres e-mail.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                        <span id="message-error" class="error-msg">Treść wiadomości jest wymagana.</span>
+                    </div>
+
+                    <button type="submit" class="btn">Wyślij wiadomość</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
